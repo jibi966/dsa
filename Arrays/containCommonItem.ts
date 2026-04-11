@@ -8,7 +8,7 @@ function containCommonItem(arr1: number[], arr2: number[]): boolean {
     const foundMap: Record<number, boolean> = {};
 
     for (const item of arr1) {
-        foundMap[item] = true;
+        if (!foundMap[item]) foundMap[item] = true;
     };
 
     for (const item of arr2) {
